@@ -95,3 +95,22 @@
     fill: none;
     stroke: steelblue;
 }
+
+.tooltipcharts {
+    position: absolute;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    padding: 6px;
+    background: rgba(29, 24, 24, 0.9);
+    color: #fff8f8;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid #d9d9d9;
+}
+
+.tooltipcharts.n:after {
+    margin: -2px 0 0 0;
+    top: 100%;
+    left: 0;
+}
