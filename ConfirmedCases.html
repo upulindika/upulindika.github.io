@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Narrative Visualization assignment">
+    <meta name="author" content="Upul Gunasena">
+    <link rel="icon" href="icon/me.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/starter-template.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Trends in coronavirus cases</title>
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">CORONAVIRUS RESOURCE CENTER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="ConfirmedCases.html">Scene 1 - Confirmed Cases<span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="COVID-19Deaths.html" tabindex="-1">Scene 2 - COVID-19 Deaths</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 3 - Covid-19 in the
+                    US</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- start of main container -->
+
+    <div class="page-header">
+        <h2>State-by-state: Trends in coronavirus cases</h2>
+    </div>
+    <div id="tooltip-alert" class="alert alert-info hide" role="alert" data-dismiss="alert">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+        <strong></strong> Tooltips and filters are available. Use your mouse to hover over any bars on the bar chart to
+        see its tooltip, and drill-down combobox to filter the information by state.
+    </div>
+    <div class="container">
+
+        <div class="col-lg-12">
+            <p class="lead">This chart provides the number of confirmed cases of novel coronavirus over the past few
+                months by state. More than 3,784,920 people in the United States have been infected with the
+                coronavirus. Case numbers are surging throughout most of the United States, including in many states
+                that were among the first to reopen. Because the number of people hospitalized and the percentage of
+                people testing positive is also rising in many of those places, the case spike cannot be solely
+                explained by increased testing.
+            </p>
+            <p class="lead">
+                To put that in perspective, the first reported case came on January 21. After 99 days, 1 million
+                Americans became infected.It took just 43 days after that to reach 2 million cases. And 28 days later,
+                on July 8, the US reached 3 million cases. The 4 millionth case could come just two weeks after that.
+                More governors are requiring masks, and dozens of hospitals are out of intensive care unit beds. The
+                current surge in coronavirus cases in the United States is being driven by states that were among the
+                first to reopen their economies, decisions that epidemiologists warned could lead to a wave of
+                infections.
+            </p>
+        </div>
+
+
+        <div id="confirmed-cases-bar-chart">
+
+            States:
+            <select id="year">
+                <option selected value="All">All</option>
+            </select>
+        </div>
+
+
+    </div>
+</div> <!-- /end of main container -->
+<div style="display: flex;  justify-content: center;">
+    <a href="index.html">
+        <button type="button" class="btn btn-default btn-lg btn-primary">
+            Previous<i class="fa fa-chevron-left"></i>
+        </button>
+    </a>
+    <div class="col-lg-9"></div>
+    <a href="COVID-19Deaths.html">
+        <button type="button" class="btn btn-default btn-lg btn-primary">
+            <i class="fa fa-chevron-right"></i>Next
+        </button>
+    </a>
+</div>
+<footer class="footer   text-center">
+    <div class="container">
+        <p class="text-muted"></p>
+        <strong>Author <a href="https://github.com/upulindika" target="_blank">Upul Gunasena</a></strong>
+    </div>
+</footer>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<script src="lib/annotations.js"></script>
+<script src='lib/tool-tip.js'></script>
+<script src="lib/ConfirmedCases.js"></script>
+</body>
+
+</html>

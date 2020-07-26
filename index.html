@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Narrative Visualization assignment">
+    <meta name="author" content="Upul Gunasena">
+    <link rel="icon" href="icon/me.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/starter-template.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/stylesScatter.css" rel="stylesheet">
+    <title>COVID-19 Case Tracker</title>
+</head>
+
+<body>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">CORONAVIRUS RESOURCE CENTER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ConfirmedCases.html">Scene 1 - Confirmed Cases</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 2 - COVID-19 Deaths</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 3 - Covid-19 in the
+                    US</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Begin page content -->
+
+<div class="container">
+    <!-- start of main container -->
+
+    <div class="page-header">
+        <h2>Coronavirus Pandemic (COVID-19)</h2>
+    </div>
+    <div id="tooltip-alert" class="alert alert-info hide" role="alert" data-dismiss="alert">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+        <strong></strong> Tooltips are available. Use the mouse to hover over any dots, maps on the chart to see its
+        tooltip.
+    </div>
+    <div class="container">
+        <div class="col-lg-12">
+            <p class="lead">
+                Authorities in 214 countries and territories have reported about 15.1 million Covid‑19 cases and 620,000
+                deaths since China reported its first cases to the World Health Organization (WHO) in December.
+                Only if we end the pandemic everywhere can we end the pandemic anywhere. The entire world has the same
+                goal:
+                cases of COVID-19 need to go to zero. The scatter plot below shows which each countries number of
+                confirmed cases vs their population. these countries is adequate. We explain this chart and the metrics
+                in much more detail further slides. To be safe anywhere, every region in the world needs to make
+                progress
+                against the pandemic – and this means colored dots disappearing from the plot. Progress is
+                possible – some countries bent the curve of new cases and are monitoring the outbreak well. But globally
+                we
+                are very far from the goal and the global number of confirmed cases is rising extremely fast.
+            </p>
+            <div id="world-scatter-plot">
+            </div>
+
+            <p class="lead"> Since January, novel coronavirus has spread to nearly every state and territory.
+            </p>
+            <div id="map-svg"></div> <!-- map code goes here -->
+            <!-- bar code goes here -->
+            <p class="lead">The number of COVID-19 cases worldwide has surpassed 15 million, according to data from
+                Johns Hopkins University. The United States still has the highest numbers, with nearly 4 million cases
+                as of Jul 16, 2020, followed by Brazil with 2.1 million cases, and India with 1.1 million cases.
+                The worldwide death toll from COVID-19 is over 618,000, according to Johns Hopkins.
+            </p>
+            <p class="lead">
+                As of now the US is on track to hit 1 million new cases in 2 weeks. The presentation has attempted to
+                track and do analysis on COVID-19 cases of US over next four
+                scenes.
+            </p>
+            <div class="text-center">
+                <button type="button" class="btn btn-default btn-lg btn-primary" data-toggle="modal"
+                        data-target="#essay-doc">
+                    About the Visualization
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div id="essay-doc" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <object type="application/pdf" data="docs/cs498-7-3-3-Essay.pdf" width="100%" height="500"
+                                    style="height: 85vh;">No Support
+                            </object>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /end of next page container -->
+    </div>
+
+
+</div> <!-- /end of main container -->
+<div class="container">
+    <!-- /start of next page container -->
+    <div class="col-lg-12 text-center">
+        <a href="ConfirmedCases.html">
+            <button type="button" class="btn btn-default btn-lg btn-primary">
+                <i class="fa fa-chevron-right"></i>Next
+            </button>
+        </a>
+    </div>
+</div>
+
+<footer class="footer   text-center">
+    <div class="container">
+        <p class="text-muted"></p>
+        <strong>Author <a href="https://github.com/upulindika" target="_blank">Upul Gunasena</a></strong>
+    </div>
+</footer>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="lib/ConfirmedCasesMap.js"></script>
+<script src="lib/annotations.js"></script>
+<script src="lib/map-legend.js"></script>
+<script src='lib/tool-tip.js'></script>
+<script src="lib/ScatterPlot.js"></script>
+<script>
+    window.setTimeout(function () {
+        $(".alert").alert('close');
+    }, 15000);
+</script>
+</body>
+
+</html>
